@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav{
+            background-color:rgb(122, 130, 171) ;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Video Game Stats</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+</head>
+<body>
+    <div class="page-container">
+                <div class="page-back">
+                    <nav>
+                        <img class="logo" src="https://iconalone.com/sites/default/files/styles/220x220/public/3d%20chart.svg_0.png?itok=XXNF8iPW">
+                        <ul>
+                            <li><a href="Music.html" class="hover">Music</a></li>
+                            <li><a href="Movies.html" class="hover">Movies</a></li>
+                            <li><a href="Video Games.html" class="hover">Video Games</a></li>
+                            <li><a href="Social Media.html" class="hover">Social Media</a></li>
+                            <li><a href="References.html" class="hover">References</a></li>
+                        </ul>
+
+                    </nav>
+        <div style="clear:both"></div>
+                </div>
+            </div>
+
+
+<div id="videogamessection">
+<br>
+<h1 class="subtext">Top 20 Highest Selling Video Games of all Time</h1>
+
+<table id="example" class="display" width="100%"></table>
+
+</div>
+</body>
+</html>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script>
+
+
+    var dataSetVideogames = [
+        [ "Tetris", "Spectrum HoloByte", "170", "1984", "Puzzle"],
+        [ "Minecraft", "Mojang", "144", "2011", "Sandbox"],
+        [ "Grand Theft Auto V", "Rockstar", "95", "2013", "Action, Sandbox"],
+        [ "Wii Sports", "Nintendo", "82.850", "2006", "Sports"],
+        [ "Super Mario Bros.", "Nintendo", "40.240", "1985", "Platformer"],
+        [ "PlayerUnknown's Battlegrounds", "PUBG Corporation", "40", "2017", "Action, Shooter"],
+        [ "Mario Kart Wii", "Nintendo", "37.1", "2008", "Racing"],
+        [ "Wii Sports Resort", "Nintendo", "33.080", "2009", "Sports"],
+        [ "Pokemon Red and Blue", "Nintendo", "31.380", "1996", "RPG"],
+        [ "New Super Mario Bros.", "Nintendo", "30.8", "2006", "Platformer"],
+        [ "New Super Mario Bros. Wii", "Nintendo", "30.2", "2009", "Platformer"],
+        [ "The Elder Scrolls V: Skyrim", "Bethesda", "30", "2011", "Action, RPG, Sandbox"],
+        [ "Duck Hunt", "Nintendo", "28.3", "1984", "Arcade"],
+        [ "Wii Play", "Nintendo", "28.020", "2006", "Party, Arcade"],
+        [ "Grand Theft Auto: San Andreas", "Rockstar", "27.5", "2004", "Action, Sandbox"],
+        [ "Call of Duty: Modern Warfare 3", "Activision", "26.5", "2011", "Action, Shooter"],
+        [ "Call of Duty: Black Ops", "Activision", "26.2", "2010", "Action, Shooter"],
+        [ "Grand Theft Auto IV", "Rockstar", "25", "2008", "Action, Sandbox"],
+        [ "Call of Duty: Black Ops II", "Activision", "24.2", "2012", "Action, Shooter"],
+        [ "Kinect Adventures", "Microsoft", "24", "2010", "Party, Arcade"]
+    ];
+
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            data: dataSetVideogames,
+            columns: [
+                { title: "Game" },
+                { title: "Publisher" },
+                { title: "Sales (Mil)" },
+                { title: "Release Year" },
+                { title: "Genre" }
+            ]
+        } );
+    } );
+</script>

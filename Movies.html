@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav{
+            background-color:rgb(122, 130, 171) ;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Movie Stats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+</head>
+<body>
+<div class="page-container">
+            <div class="page-back">
+                <nav>
+                    <img class="logo" src="https://iconalone.com/sites/default/files/styles/220x220/public/3d%20chart.svg_0.png?itok=XXNF8iPW">
+                    <ul>
+                        <li><a href="Music.html" class="hover">Music</a></li>
+                        <li><a href="Movies.html" class="hover">Movies</a></li>
+                        <li><a href="Video Games.html" class="hover">Video Games</a></li>
+                        <li><a href="Social Media.html" class="hover">Social Media</a></li>
+                        <li><a href="References.html" class="hover">References</a></li>
+
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+<div id="moviessection">
+    <br>
+<h1 class="subtext" >Top 20 Highest Grossing Movies of all Time</h1>
+
+<table id="example" class="display" width="100%"></table>
+
+</div>
+</body>
+</html>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script>
+
+
+    var dataSetMovies = [
+        [ "Avatar", "2.787", "2009", "Science Fiction"],
+        [ "Titanic", "2.187", "1997", "Romance"],
+        [ "Star Wars: The Force Awakens", "2.068", "2015", "Science Fiction"],
+        [ "Avengers: Infinity War", "1.967", "2018", "Superhero"],
+        [ "Jurassic World", "1.671", "2015", "Science Fiction"],
+        [ "The Avengers", "1.518", "2012", "Superhero"],
+        [ "Furious 7", "1.516", "2015", "Action"],
+        [ "Avengers: Age of Ultron", "1.405", "2015", "Superhero"],
+        [ "Black Panther", "1.345", "2018", "Superhero"],
+        [ "Harry Potter and the Deathly Hallows - Part 2", "1.341", "2011", "Fantasy"],
+        [ "Star Wars: The Last Jedi", "1.332", "2017", "Science Fiction"],
+        [ "Frozen", "1.290", "2013", "Fantasy Musical"],
+        [ "Beauty and the Beast", "1.263", "2017", "Romantic Musical"],
+        [ "The Fate of the Furious", "1.238", "2017", "Action"],
+        [ "Iron Man 3", "1.214", "2013", "Superhero"],
+        [ "Minions", "1.159", "2015", "Comedy"],
+        [ "Captian America: Civil War", "1.153", "2016", "Superhero"],
+        [ "Transformers: Dark of the Moon", "1.123", "2011", "Science Fiction"],
+        [ "The Lord of the Rings: The Return of the King", "1.120", "2003", "Fantasy"],
+        [ "Skyfall", "1.108", "2012", "Action"]
+
+    ];
+
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            data: dataSetMovies,
+            columns: [
+                { title: "Movie" },
+                { title: "Gross $ (Bil)" },
+                { title: "Release Year" },
+                { title: "Genre" }
+            ]
+        } );
+    } );
+</script>

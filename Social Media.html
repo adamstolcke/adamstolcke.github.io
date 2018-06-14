@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav{
+            background-color:rgb(122, 130, 171) ;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Social Media Stats</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+
+
+</head>
+<body>
+<div class="page-container">
+            <div class="page-back">
+                <nav>
+                    <img class="logo" src="https://iconalone.com/sites/default/files/styles/220x220/public/3d%20chart.svg_0.png?itok=XXNF8iPW">
+                    <ul>
+                        <li><a href="Music.html" class="hover">Music</a></li>
+                        <li><a href="Movies.html" class="hover">Movies</a></li>
+                        <li><a href="Video Games.html" class="hover">Video Games</a></li>
+                        <li><a href="Social Media.html" class="hover">Social Media</a></li>
+    <li><a href="References.html" class="hover">References</a></li>
+
+                    </ul>
+
+                </nav>
+    <div style="clear:both"></div>
+            </div>
+        </div>
+<div id="socialmediasection">
+    <br>
+    <h1>The 18 Most Used Social Media Services</h1>
+    <h4>As of August 2017</h4>
+
+<table id="example" class="display" width="100%"></table>
+
+</div>
+</body>
+</html>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script>
+
+
+    var dataSetSocialmedia = [
+        [ "Facebook", "Facebook", "2,047 (~2bil)", "2004", ""],
+        [ "YouTube", "Google", "1,500 (1.5 bil)", "2005", ""],
+        [ "WhatsApp", "Facebook", "1,200 (1.2 bil)", "2009", ""],
+        [ "Facebook Messenger", "Facebook", "1,200 (1.2 bil)", "2008", ""],
+        [ "WeChat", "Tencent", "938", "2011", ""],
+        [ "QQ", "Tencent", "861", "1999", ""],
+        [ "Instagram", "Facebook", "700", "2010", ""],
+        [ "QZone", "Tencent", "638", "2005", ""],
+        [ "Tumblr", "Oath Inc.", "357", "2007", ""],
+        [ "Twitter", "Twitter", "328", "2006", ""],
+        [ "Sina Weibo", "Sina Corporation", "313", "2009", ""],
+        [ "Baidu Teiba", "Baidu", "300", "2003", ""],
+        [ "Skype", "Microsoft", "300", "", ""],
+        [ "Viber", "Rakuten", "260", "2006", ""],
+        [ "Snapchat", "Snapchat Inc.", "255", "2004", ""],
+        [ "Reddit", "Advance Publications", "250", "2011", ""],
+        [ "Line", "Line Corporation", "214", "2010", ""],
+        [ "Pinterest", "Cold Brew Inc.", "175", "2008", ""]
+    ];
+
+
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            data: dataSetSocialmedia,
+            columns: [
+                { title: "Social Media" },
+                { title: "Company" },
+                { title: "Active Users (Mil)" },
+                { title: "Release Year" },
+                { title: "Country"}
+            ]
+        } );
+    } );
+</script>

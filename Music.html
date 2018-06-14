@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        nav{
+            background-color:rgb(122, 130, 171) ;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Music Stats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+    <div class="page-container">
+                <div class="page-back">
+                    <nav>
+                        <img class="logo" src="https://iconalone.com/sites/default/files/styles/220x220/public/3d%20chart.svg_0.png?itok=XXNF8iPW">
+                        <ul>
+                            <li><a href="Music.html" class="hover">Music</a></li>
+                            <li><a href="Movies.html" class="hover">Movies</a></li>
+                            <li><a href="Video Games.html" class="hover">Video Games</a></li>
+                            <li><a href="Social Media.html" class="hover">Social Media</a></li>
+                            <li><a href="References.html" class="hover">References</a></li>
+
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+</head>
+
+<body>
+<div id="musicsection">
+
+<br>
+<h1 class="subtext">Top 20 Highest Selling Albums of all Time</h1>
+
+
+
+<table id="example" class="display" width="100%"></table>
+
+</div>
+
+</body>
+</html>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+<script>
+
+
+    var dataSetMusic = [
+        [ "Thriller", "Michael Jackson", "66", "1982", "Pop, R&B"],
+        [ "Back in Black", "AC/DC", "50", "1980", "Hard Rock"],
+        [ "The Dark Side of the Moon", "Pink Floyd", "45", "1973", "Progressive Rock"],
+        [ "Bat Out of Hell", "Meat Loaf", "43", "1977", "Hard Rock"],
+        [ "The Bodyguard", "Whitney Houston", "42", "1992", "R&B, Soul"],
+        [ "Greatest Hits", "Eagles", "42", "1976", "Country Rock, Soft Rock"],
+        [ "Saturday Night Fever", "Bee Gees", "40", "1977", "Disco"],
+        [ "Rumours", "Fleetwood Mac", "40", "1977", "Soft Rock"],
+        [ "Grease (Soundtrack)", "Various Artists", "38", "1978", "Soundtrack"],
+        [ "Led Zeppelin IV", "Led Zeppelin", "37", "1971", "Hard Rock"],
+        [ "Bad", "Michael Jackson", "35", "1987", "Pop, Funk"],
+        [ "Jagged Little Pill", "Alanis Morissette", "33", "1995", "Alternative Rock"],
+        [ "Come on Over", "Shania Twain", "33", "1997", "Country, Pop"],
+        [ "Falling Into You", "Celine Dion", "32", "1996", "Pop, Soft Rock"],
+        [ "Sgt. Pepper's Lonely Hearts Club Band", "The Beatles", "32", "1967", "Rock"],
+        [ "Hotel California", "Eagles", "32", "1976", "Soft Rock"],
+        [ "Dirty Dancing", "Various Artists", "32", "1987", "Pop, Rock"],
+        [ "21", "Adele", "31", "2011", "Pop, Soul"],
+        [ "Let's Talk About Love", "Celine Dion", "31", "1997", "Pop"],
+        [ "1", "The Beatles", "31", "2000", "Rock"]
+    ];
+
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            data: dataSetMusic,
+            columns: [
+                { title: "Album" },
+                { title: "Artist" },
+                { title: "Sales (Mil)" },
+                { title: "Release Year" },
+                { title: "Genre" }
+            ]
+        } );
+    } );
+</script>
